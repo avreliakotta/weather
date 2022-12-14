@@ -1,0 +1,144 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+      
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="src/style.css"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+            <div id="app"></div>
+    
+        <div class="container">
+            <form class= "form-search" id="search-form">
+                
+                <div class="row">
+                    <div class="col-6">
+                    <input type="search" class="form-control" placeholder="Enter a city" id="city-now"/>
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="Search" class="form-controle btn btn-warning shaddow-sm" id="search-now"/>
+                </div>
+                <div class="col-3"> 
+                <input type="submit" value="Current" class="form-controle btn btn-success shaddow-sm" id="current-button"/> 
+                  </div>
+                </div>
+             </form>
+        <div class="block">
+    
+             <div class="city">
+                <h2>Kyiv</h2> 
+            </div>
+             <div class="box">
+                
+                <div class="box1">
+                    <p id="data"> 
+                        Friday 16-30
+                    </p>
+                    <p class="p1" id="description" >
+                        
+                    </p>
+                </div>     
+                    
+                
+                
+                <div class="box2">
+                     <ul>
+                         <li id="pressure"> 
+                        Pressure:
+                     </li>
+    
+                    <li id="humidity">
+                        Humidity: 
+                    </li>
+                     <li id="wind">
+                        Wind: 
+                     </li>
+                     </ul>
+                 </div>
+                </div>
+                <div class="clouds">
+                <h1><i class="bi bi-clouds" ></i></h1>
+                    <h1 class = "degree" id="temp-degrees"> </h1>
+            
+                    
+               <div class="measure">
+                <a href = "#" id = "celsius-link"> °C </a>|
+                <a href = "#" id = "fahrenheit-link">°F</a>
+            </div>
+           // </div>  
+                
+                <div class="box3">
+                <div class="weather-app">
+                 <div class="row">
+                    <div class="col-2">
+                    <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sat</h5>
+                        <h1><i class="bi bi-cloud-snow"></i>
+                             </h1>
+                            <p class="card-text"> 1°/-5°</p>
+                    </div>
+                    </div>
+                    </div>
+                         <div class="col-2">
+                        <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sun</h5>
+                            <h1><i class="bi bi-cloud-sleet"></i>
+                                </h1>
+                            <p class="card-text">-2/-2°</p>
+                        </div>
+                        </div>
+                        </div>
+                             <div class="col-2">
+                            <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Mon</h5>
+                               <h1> <i class="bi bi-cloud-snow"></i>
+                                    </h1>
+                                  <p class="card-text">  1°/-2°</p>
+                            </div>
+                            </div>
+                            </div>
+                                <div class="col-2">
+                                <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tues</h5>
+                                    <h1><i class="bi bi-cloud-snow"></i>
+                                        </h1>
+                                    <p class="card-text">0°/-4°</p>
+                                </div>
+                                </div>
+                                </div>
+                                     <div class="col-2">
+                                    <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Wen</h5>
+                                        <h1><i class="bi bi-cloud-sleet"></i>
+                                            </h1>
+                                        <p class="card-text">1°/-1°</p>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                                    
+                    </div>
+                </div >
+            </div >
+            <p class="footer">
+            This  project was coded by <a href="mailto:natalia.melnyk28@gmail.com">Nataliia Melnyk</a>
+
+        </p>
+    <script src="src/script.js"></script>   
+    </body>
+    </html>
