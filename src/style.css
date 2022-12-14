@@ -4,7 +4,7 @@
 }
 .box2 {
     display: flex;
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 20px;
   }
   li {
@@ -28,7 +28,7 @@
 }
 .clouds {
     margin-bottom: 100px;
-    margin-top: -90px;
+    margin-top: -70px;
     height: 60px;
   }
 
@@ -74,6 +74,7 @@ h5:hover{
 }
 .p1{
     margin-top: -12px;
+    text-transform: capitalize;
 }
 
 .degree{
