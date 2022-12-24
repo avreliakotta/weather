@@ -38,11 +38,15 @@ function formatDate(timestamp){
 
 }
 
+
+
+
 function showTemperature(response) {
   let temperature = document.querySelector("#temp-degrees");
   temperature = Math.round(response.data.main.temp);
   let h1 = document.querySelector("#temp-degrees");
   h1.innerHTML = temperature;
+  celsiusTemperature = response.data.main.temp;
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
   let pressure = document.querySelector("#pressure");
@@ -60,8 +64,41 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt",response.data.weather[0].description);
+
+
+  let name2 = document.querySelector("h2");
+
+ 
+  name2.innerHTML = response.data.name;
+  
   
 }
+
+
+function displayFahrenheitTemperature(event){
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature =(celsiusTemperature*9)/5+32;
+let temperatureElement=document.querySelector("#temp-degrees");
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink =document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click",displayFahrenheitTemperature);
+function displayCelsiusTemperature(event){
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement=document.querySelector("#temp-degrees");
+  temperatureElement.innerHTML =Math.round(celsiusTemperature);
+}
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click",displayCelsiusTemperature);
+
+let celsiusTemperature = null;
+
+
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
@@ -71,7 +108,16 @@ function showPosition(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
+
+function showCurPosition() {
+  
+  let name1 = document.querySelector("h2");
+  name1.innerHTML = "";
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
 navigator.geolocation.getCurrentPosition(showPosition);
 
 let button = document.querySelector("#current-button");
-button.addEventListener("click", showPosition);
+button.addEventListener("click", showCurPosition);
+

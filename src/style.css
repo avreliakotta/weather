@@ -74,6 +74,15 @@ h5:hover{
 .measure{
     margin-left: 90px;
     margin-top: -50px;
+    
+}
+a{
+     cursor:default;
+    text-decoration: none;
+}
+a.active{
+    color:rgb(33,33,33);
+
 }
 .p1{
     margin-top: -12px;
