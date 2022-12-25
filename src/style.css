@@ -12,30 +12,21 @@
   }
 .container{
     margin-top: 50px;
-    border: 2px solid rgba(246, 124, 37, 0.782); 
+    border: 3px solid rgba(246, 124, 37, 0.782); 
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 700px;
-    background:#edf6f5;
+    background:white;
 }
 
-.body{background: rgb(143, 230, 201);}
+.body{background: white;}
 .city{
-
+ margin-top: 20px;
+    }
     
-    margin-top: 20px;
-    
-}
-.clouds {
-    margin-bottom: 100px;
-    margin-top: -70px;
-    height: 60px;
-    margin-right:20px;
-  }
-
-p{  
+    p{  
     color:#6c7572;
     font-size: 15px;
     line-height: 16px;
@@ -53,6 +44,7 @@ h1,h2,h5{
 .card-body:hover{
     background-color: rgba(246, 124, 37, 0.782);
     cursor: default;
+    
 
 }
 h5{
@@ -68,13 +60,25 @@ h5:hover{
 }
 .block{margin-left: 20px;}
 .form-search{
-    padding-left:20px ;
-    margin-right:300px ;
+    padding-left: 20px;
+    margin-right: 300px;
 }
+
+
+.clouds{
+    
+    margin-bottom: 100px;
+    margin-top:-170px;
+}
+    
 .measure{
     margin-left: 90px;
-    margin-top: -50px;
-    
+    margin-top: -150px;
+    margin-bottom:100px ;
+}
+.box2{
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
 a{
      cursor:default;

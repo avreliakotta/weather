@@ -14,23 +14,27 @@
         <title>Document</title>
     </head>
     <body>
-            <div id="app"></div>
+            
     
         <div class="container">
             <form class= "form-search" id="search-form">
-                
-                <div class="row">
+            <div class="row">
                     <div class="col-6">
+                        <form class= "form-search" id="search-form">
                     <input type="search" class="form-control" placeholder="Enter a city" id="city-now"/>
                 </div>
+                
                 <div class="col-3">
                   <input type="submit" value="Search" class="form-controle btn btn-warning shaddow-sm" id="search-now"/>
                 </div>
+            
+            
                 <div class="col-3"> 
-                <input type="submit" value="Current" class="form-controle btn btn-success shaddow-sm" id="current-button"/> 
-                  </div>
+                <input type="submit" value="Current" class="form-controle btn btn-success shaddow-sm" id="current-button"/>
+            </form> 
+            </div>
                 </div>
-             </form>
+             
         <div class="block">
     
              <div class="city">
@@ -66,23 +70,29 @@
                  </div>
                 </div>
                 <div class="clouds">
-                <img
+                    <div class="row"> 
+                        <div class="col-6">
+                    <img
                     src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                     alt="Clear"
                     height="45"
-                    id="icon"
-                    />
+                    id="icon"/>
                 
-                    <h1 class = "degree" id="temp-degrees"> </h1>
-            
-                    
-               <div class="measure">
+                    </div>
+                </div>
+                
+                 <div class="row">   
+                <div class="col-6">
+                     <h1 class = "degree" id="temp-degrees"> </h1>
+                </div>
+            </div>
+                </div> 
+            <div class="measure">
                 <a href = "#" id = "celsius-link" class="active"> °C </a>|
                 <a href = "#" id = "fahrenheit-link" >°F</a>
-            </div>
-            </div>  
-                
-                <div class="box3">
+               </div>
+        
+         <div class="box3">
                 <div class="weather-app">
                  <div class="row">
                     <div class="col-2">
