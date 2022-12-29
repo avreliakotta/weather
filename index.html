@@ -15,8 +15,9 @@
     </head>
     <body>
             
-    
-        <div class="container">
+    <div class="container">
+        <div class="weather-app">
+
             <form class= "form-search" id="search-form">
             <div class="row">
                     <div class="col-6">
@@ -27,20 +28,20 @@
                 <div class="col-3">
                   <input type="submit" value="Search" class="form-controle btn btn-warning shaddow-sm" id="search-now"/>
                 </div>
-            
-            
                 <div class="col-3"> 
                 <input type="submit" value="Current" class="form-controle btn btn-success shaddow-sm" id="current-button"/>
-            </form> 
-            </div>
                 </div>
+            </div>
+            </form> 
+        
+                
              
         <div class="block">
     
              <div class="city">
-                <h2></h2> 
+                <h2>Kyiv</h2> 
             </div>
-             <div class="box">
+             
                 
                 <div class="box1">
                      <p>Last updated at:  <span id="data"> 
@@ -50,11 +51,39 @@
                     <p class="p1" id="description" >
                         
                     </p>
-                </div>     
+                </div>
+                
+                    <div class="row"> 
+                        <div class="col-6">
+                            
+                    <div class="clearfix weather-temperature">        
+                    <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="Clear"
+                    height="45"
+                    id="icon"
+                    class="float-left"
+                    />
                     
+                    <strong class = "degree" id="temp-degrees">6</strong>
+                    
+                        <span class="units">
+                    <a href = "#" id = "celsius-link" class="active"> °C </a>|
+                    <a href = "#" id = "fahrenheit-link" >°F</a>
+                </span>
                 
-                
-                <div class="box2">
+            
+                    </div>
+                    </div>
+                            
+                       
+                    
+               
+                        
+            
+            
+                     
+                    <div class="col-6">
                      <ul>
                          <li id="pressure"> 
                         Pressure:
@@ -69,116 +98,136 @@
                      </ul>
                  </div>
                 </div>
-                <div class="clouds">
-                    <div class="row"> 
-                        <div class="col-6">
-                    <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                    alt="Clear"
-                    height="45"
-                    id="icon"/>
+            
                 
-                    </div>
-                </div>
-                
-                 <div class="row">   
-                <div class="col-6">
-                     <h1 class = "degree" id="temp-degrees"> </h1>
-                </div>
-            </div>
-                </div> 
-            <div class="measure">
-                <a href = "#" id = "celsius-link" class="active"> °C </a>|
-                <a href = "#" id = "fahrenheit-link" >°F</a>
-               </div>
-        
-         <div class="box3">
-                <div class="weather-app">
+         
+                <div class="weather-forecast" id="forecast">
                  <div class="row">
+                    
+                    
                     <div class="col-2">
-                    <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Sat</h5>
+                        <div class="card">
+                            <div class="card-body">
+                    
+                    <div class="weather-forecast-date">Sat</div>
+                        
                         <img
                     src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                     alt="Clear"
-                    height="45"
-                    id="icon"
+                    height="42"
+                    
                     />
-                            
-                            <p class="card-text"> 1°/-5°</p>
+                    <div class ="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max">1°/</span>
+                    <span class="weather-forecast-temperature-min">-3°</span>
+                    </div>       
                     </div>
-                    </div>
-                    </div>
-                         <div class="col-2">
-                        <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Sun</h5>
-                            <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                    alt="Clear"
-                    height="45"
-                    id="icon"
-                    />
-                            
-                            <p class="card-text">-2/-2°</p>
-                        </div>
-                        </div>
-                        </div>
-                             <div class="col-2">
+                 </div>
+                </div>
+                    
+                    
+                    
+                        <div class="col-2">
                             <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Mon</h5>
-                                <img
-                                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                                alt="Clear"
-                                height="45"
-                                id="icon"
-                                />
-                                  <p class="card-text">  1°/-2°</p>
-                            </div>
-                            </div>
-                            </div>
-                                <div class="col-2">
-                                <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Tues</h5>
+                        
+                        <div class="weather-forecast-date">Sun</div>
+                            
+                            <img
+                        src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                        alt="Clear"
+                        height="45"
+                        
+                        />
+                        <div class ="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max">1°/</span>
+                        <span class="weather-forecast-temperature-min">-3°</span>
+                        </div>       
+                        </div>
+                            </div>
+                        </div>
+                        
+                    
+                        
+                            <div class="col-2">
+                                <div class="card">
+                                    <div class="card-body">
+                            
+                            <div class="weather-forecast-date">Mon</div>
+                                
+                                <img
+                            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                            alt="Clear"
+                            height="42"
+                            
+                            />
+                            <div class ="weather-forecast-temperatures">
+                            <span class="weather-forecast-temperature-max">1°/</span>
+                            <span class="weather-forecast-temperature-min">-3°</span>
+                            </div>       
+                            </div>
+                                </div>
+                            </div>
+                        
+                            
+                            
+                                <div class="col-2">
+                                    <div class="card">
+                                        <div class="card-body">
+                                
+                                <div class="weather-forecast-date">Tue</div>
                                     
                                     <img
-                                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                                    alt="Clear"
-                                    height="45"
-                                    id="icon"
-                                    />
-                                    <p class="card-text">0°/-4°</p>
+                                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                                alt="Clear"
+                                height="42"
+                                
+                                />
+                                <div class ="weather-forecast-temperatures">
+                                <span class="weather-forecast-temperature-max">1°/</span>
+                                <span class="weather-forecast-temperature-min">-3°</span>
+                                </div>       
                                 </div>
-                                </div>
-                                </div>
-                                     <div class="col-2">
-                                    <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Wen</h5>
-                                        <img
-                                            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                                             alt="Clear"
-                                            height="45"
-                                             id="icon"
-                                             />
-                                        <p class="card-text">1°/-1°</p>
                                     </div>
                                     </div>
-                                    </div>
-                                </div>
+                                    <div class="col-2">
+                        <div class="card">
+                            <div class="card-body">
+                    
+                    <div class="weather-forecast-date">Wed</div>
+                        
+                        <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="Clear"
+                    height="42"
+                    
+                    />
+                    <div class ="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max">1°/</span>
+                    <span class="weather-forecast-temperature-min">-3°</span>
+                    </div>       
+                    </div>
+                 </div>
+                </div>
+                                
                             </div>
+                                </div>
+                            
                                 
                                     
-                    </div>
-                </div >
-            </div >
+                    
+        </div>
+        </div>
+    
+    
+            
+            
             <small class="footer">
             This  project was coded by <a href="mailto:natalia.melnyk28@gmail.com"> Nataliia Melnyk </a>and is <a href="https://github.com/avreliakotta/weather/settings" >open-sourced on GitHub </a> and hosted on <a href="https://unrivaled-parfait-1d72ec.netlify.app">Netify</a>
-
             </small>
-    <script src="src/script.js"></script>   
+    </div>
+                
+    <script src="src/script.js"></script>
+          
     </body>
     </html>

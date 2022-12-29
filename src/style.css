@@ -3,20 +3,28 @@
     flex-direction: row ;
 }
 .box2 {
-    display: flex;
-    margin-left: 200px;
+    display:flex;
+    margin-left: 400px;
     margin-top: 20px;
+    margin-bottom: 200px;
   }
   li {
+    display:block;
     list-style-type: none;
+    margin:0;
+    padding:0;
   }
-.container{
-    margin-top: 50px;
+  .container{
+    margin:20px auto;
+  }
+.weather-app{
+    margin:0 auto;
+    
     border: 3px solid rgba(246, 124, 37, 0.782); 
-    padding-top: 30px;
-    padding-bottom: 30px;
+    
+    padding: 20px;
     border-radius: 10px;
-    margin: 20px auto;
+    
     max-width: 700px;
     background:white;
 }
@@ -25,18 +33,56 @@
 .city{
  margin-top: 20px;
     }
+    .weather-forecast{
+    margin-top: 80px;
+    display: block;
     
-    p{  
+        ;
+    }
+    .weather-temperature strong{
+        margin-top: -90px;
+        margin-left:-2px;
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 400;
+    }
+    .weather-temperature img{
+        
+        margin-top:-50px;
+        height:64px;
+        width: 64px;
+    }
+   .weather-temperature span{
+    position: relative;
+        font-size: 13px;
+        top:-26px;
+    }
+        
+
+    
+    .weather-forecast-date{ 
     color:#6c7572;
-    font-size: 15px;
-    line-height: 16px;
+    font-size: 16px;
+    opacity:0.5;
+    transition: all 200px ease-in-out;
 }
-h1,h2,h5{
+.weather-forecast-date:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.weather-forecast-temperatures{
+    font-size:13px;
+}
+.weather-forecast-temperature-min{
+    opacity:0.5;
+}
+h1,h2{
     color:#343a40;
     
 }
 .card-body{
-    border-color:1px solid antiquewhite;
+    
+     border-color:1px solid antiquewhite;
     border-radius: 8px;
     transition: all 200ms ease-in-out;
     
@@ -47,39 +93,20 @@ h1,h2,h5{
     
 
 }
-h5{
-    transition: all 200px ease-in-out;
+
+p{ margin-top: -10px;}
+
+.block{
+    margin-left: 15px;
 }
-h5:hover{
-    text-decoration: underline;
-}
-.weather-app{
-    display: block;
-    margin-right: -100px;
-    margin-left: 20px;
-}
-.block{margin-left: 20px;}
 .form-search{
     padding-left: 20px;
     margin-right: 300px;
 }
 
 
-.clouds{
-    
-    margin-bottom: 100px;
-    margin-top:-170px;
-}
-    
-.measure{
-    margin-left: 90px;
-    margin-top: -150px;
-    margin-bottom:100px ;
-}
-.box2{
-    margin-top: 20px;
-    margin-bottom: 100px;
-}
+
+
 a{
      cursor:default;
     text-decoration: none;
@@ -89,7 +116,7 @@ a.active{
 
 }
 .p1{
-    margin-top: -12px;
+    margin-top: -20px;
     text-transform: capitalize;
 }
 
@@ -100,5 +127,5 @@ a.active{
 .footer{
     display:block;
     text-align: center;
-
+    
 }
