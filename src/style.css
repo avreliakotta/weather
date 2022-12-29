@@ -19,13 +19,10 @@
   }
 .weather-app{
     margin:0 auto;
-    
-    border: 3px solid rgba(246, 124, 37, 0.782); 
-    
-    padding: 20px;
+     border: 3px solid rgba(246, 124, 37, 0.782); 
+     padding: 20px;
     border-radius: 10px;
-    
-    max-width: 700px;
+     max-width: 700px;
     background:white;
 }
 
@@ -34,10 +31,8 @@
  margin-top: 20px;
     }
     .weather-forecast{
-    margin-top: 80px;
+    margin-top: 90px;
     display: block;
-    
-        ;
     }
     .weather-temperature strong{
         margin-top: -90px;
@@ -47,20 +42,18 @@
         font-weight: 400;
     }
     .weather-temperature img{
-        
-        margin-top:-50px;
+         margin-top:-50px;
         height:64px;
         width: 64px;
     }
    .weather-temperature span{
     position: relative;
         font-size: 13px;
+        font-weight: bold;
         top:-26px;
     }
         
-
-    
-    .weather-forecast-date{ 
+     .weather-forecast-date{ 
     color:#6c7572;
     font-size: 16px;
     opacity:0.5;
@@ -90,9 +83,7 @@ h1,h2{
 .card-body:hover{
     background-color: rgba(246, 124, 37, 0.782);
     cursor: default;
-    
-
-}
+    }
 
 p{ margin-top: -10px;}
 
@@ -103,9 +94,6 @@ p{ margin-top: -10px;}
     padding-left: 20px;
     margin-right: 300px;
 }
-
-
-
 
 a{
      cursor:default;
@@ -127,5 +115,4 @@ a.active{
 .footer{
     display:block;
     text-align: center;
-    
-}
+    }
