@@ -31,8 +31,9 @@
  margin-top: 20px;
     }
     .weather-forecast{
-    margin-top: 90px;
+    margin-top: 70px;
     display: block;
+    
     }
     .weather-temperature strong{
         margin-top: -90px;
@@ -48,9 +49,9 @@
     }
    .weather-temperature span{
     position: relative;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: bold;
-        top:-26px;
+        top:-24px;
     }
         
      .weather-forecast-date{ 

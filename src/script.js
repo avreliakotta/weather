@@ -36,7 +36,8 @@ function formatDate(timestamp){
   let day = days[date.getDay()];
   return`${day} ${hours}:${minutes}`;
 }
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML= `<div class="row">`;
   let days = ["Thu","Fri","Sat","Sun","Mon","Tue"];
@@ -65,8 +66,20 @@ height="42"
   });
   forecastHTML= forecastHTML + `</div>`;
   forecastElement.innerHTML= forecastHTML;
-  console.log(forecastHTML);
+
 }
+
+function getForecast(coordinates){
+  console.log(coordinates);
+  apiKey="be60748992fab0f5da8162563fb21245";
+  apiUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+  
+  
+
+  
+
 
 
 
@@ -95,15 +108,12 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src",` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt",response.data.weather[0].description);
-
-
-  let name2 = document.querySelector("h2");
-
- 
+ let name2 = document.querySelector("h2");
   name2.innerHTML = response.data.name;
-  
-  
-}
+  getForecast(response.data.coord);
+
+
+  }
 
 
 function displayFahrenheitTemperature(event){
@@ -131,23 +141,23 @@ let celsiusTemperature = null;
 
 
 function showPosition(position) {
+
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "be60748992fab0f5da8162563fb21245";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+ axios.get(apiUrl).then(showTemperature);
 }
 
 
 function showCurPosition() {
-  
-  let name1 = document.querySelector("h2");
+ let name1 = document.querySelector("h2");
   name1.innerHTML = "";
   navigator.geolocation.getCurrentPosition(showPosition);
+
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
 
 let button = document.querySelector("#current-button");
 button.addEventListener("click", showCurPosition);
-displayForecast();
